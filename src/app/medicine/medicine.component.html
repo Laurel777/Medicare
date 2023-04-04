@@ -1,0 +1,51 @@
+<div class="text-center" >
+<h2>Medicine List</h2>
+<br/>
+<table class="table-table-striped" class="text-center">
+    <thead>
+        <tr class="text-center">
+            <th>Id</th>
+            <th> Image</th>
+            <th> Medicine-Desc</th>
+            <th> Medicine-Name</th>
+            <th> Medicine-price</th>
+            <th> Medicine-Seller</th>
+         </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let med of meds">
+        <td>{{med.id}}</td>
+        <td> <img src="{{med.image}}"/></td>
+        <td>{{med.mdesc}}</td>
+        <td>{{med.mname}}</td>
+        <td>{{med.mprice}}</td>
+        <td>{{med.mseller}}</td>
+        <td>
+            <input type="button" value="delete" class="btn btn-danger" (click)="delete(med.id)"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="button" value="modify" class="btn btn-primary" (click)="addmed()" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="View Medinfo" class="btn btn-success" (click)="getmedbyId(med.id)"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        
+
+</tr>
+         
+    </tbody>
+    <br/>
+
+</table>
+<div>
+    <div class="text-center" >
+        <h4>To logout please click here</h4>
+        
+        <a routerLink="logout">Click here</a>
+        <br/>
+        <h4>To go back to the home page please click here</h4>
+        
+        <a routerLink="">Click here</a>
+        <br/>
+        </div>
+</div>
+

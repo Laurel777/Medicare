@@ -1,0 +1,24 @@
+<h2 class="text-center">Welcome to Medicare online shopping Store</h2>
+<app-search></app-search>
+<ul>
+<li *ngFor="let med of meds">
+<a routerLink="/med/{{med.id  }}">
+     
+     <img src="{{med.imageUrl}}" alt="">
+     <div class="content">
+<div class="name">
+     {{med.name}}
+</div>
+<div class="price">
+     {{med.price}}
+</div>
+
+
+
+     </div>
+</a>
+     
+</li>
+
+
+</ul>
